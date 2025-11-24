@@ -93,6 +93,19 @@ function displayDefaultServices() {
                 <li><i class="fas fa-check"></i> Informes de rendimiento</li>
             </ul>
         </div>
+        
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3>Asistentes Virtuales y Chatbots</h3>
+            <p>Diseño e implementación de asistentes virtuales y chatbots personalizados para automatizar la atención y mejorar la experiencia de tus usuarios.</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check"></i> Integración en sitios web y aplicaciones</li>
+                <li><i class="fas fa-check"></i> Flujos de conversación a medida</li>
+                <li><i class="fas fa-check"></i> Conexión con APIs y herramientas externas</li>
+            </ul>
+        </div>
     `;
 }
 

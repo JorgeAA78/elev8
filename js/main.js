@@ -49,13 +49,14 @@ async function loadAboutContent() {
         aboutContent.innerHTML = `
             <div class="about-text">
                 <h3>Sobre Mí</h3>
-                <p>Hola me llamo Jorge, soy un apasionado desarrollador web con experiencia en crear sitios web modernos y responsivos.</p>
+                <p>Hola me llamo Jorge, soy un apasionado desarrollador web con experiencia en crear sitios web modernos y responsivos, así como en el desarrollo de asistentes virtuales personalizados.</p>
                 <div class="skills">
                     <span class="skill-tag">HTML5</span>
                     <span class="skill-tag">CSS3</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">React</span>
                     <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Asistentes Virtuales</span>
                 </div>
             </div>
             <div class="about-image">
@@ -95,6 +96,11 @@ async function loadServices() {
                 <i class="fas fa-search"></i>
                 <h3>SEO</h3>
                 <p>Optimización de motores de búsqueda para mejorar el posicionamiento web.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3>Asistentes Virtuales y Chatbots</h3>
+                <p>Diseño e implementación de asistentes virtuales y chatbots personalizados para automatizar la atención y mejorar la experiencia de tus usuarios.</p>
             </div>
         `;
     }

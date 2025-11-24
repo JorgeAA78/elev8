@@ -18,6 +18,7 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
     <!-- Favicon -->
     <link rel="icon"
@@ -64,7 +65,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <section id="servicios" class="section bg-light">
@@ -101,10 +101,49 @@
         <!-- El footer se cargará dinámicamente con JavaScript -->
     </footer>
 
+    <!-- Contenedor del chat de n8n -->
+    <div id="n8n-chat-wrapper">
+        <div id="n8n-chat"></div>
+    </div>
+
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/api.js"></script>
     <script src="js/main.js"></script>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8ncurso2025-n8n.mos4xj.easypanel.host/webhook/4623630c-0aab-4bf4-9096-9699fab72a42/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            target: '#n8n-chat',
+            mode: 'window',
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            loadPreviousSession: true,
+            metadata: {},
+            showWelcomeScreen: false,
+            defaultLanguage: 'es',
+            initialMessages: [
+                'Hola! 👋',
+                'Mi nombre es Jor. En que te puedo ayudar?'
+            ],
+            i18n: {
+                es: {
+                    title: 'Hola! 👋',
+                    subtitle: 'Inicia un chat. Estoy aqui para ayudarte  24/7.',
+                    footer: '',
+                    getStarted: 'New Conversation',
+                    inputPlaceholder: 'Pregunta lo que quieras.',
+                },
+            },
+            enableStreaming: false,
+        });
+    </script>
 </body>
 
 </html>

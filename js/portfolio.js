@@ -29,6 +29,15 @@ const projects = [
     tags: ['Vue.js', 'Firebase', 'Sass'],
     demoUrl: '#',
     codeUrl: '#'
+  },
+  {
+    id: 4,
+    title: 'Asistente Virtual / Chatbot',
+    description: 'Un asistente virtual inteligente integrado en un sitio web para responder preguntas frecuentes y guiar a los usuarios.',
+    image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80',
+    tags: ['Chatbot', 'Asistentes Virtuales', 'JavaScript', 'APIs'],
+    demoUrl: '#',
+    codeUrl: '#'
   }
 ];
 

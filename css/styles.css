@@ -173,6 +173,21 @@ header .container {
     --text-color: #333333;
     --text-light: #a6a6a6;
     --transition: all 0.3s ease;
+
+    /* Colores del widget de chat n8n adaptados a la paleta del sitio */
+    --chat--color--primary: var(--primary-color);
+    --chat--color--primary-shade-50: #000000;
+    --chat--color--primary--shade-100: #000000;
+    --chat--color--secondary: var(--secondary-color);
+    --chat--color-secondary-shade-50: #8c8c8c;
+    --chat--color-white: var(--light-color);
+    --chat--color-light: #f2f4f8;
+    --chat--color-light-shade-50: #e6e9f1;
+    --chat--color-light-shade-100: #c2c5cc;
+    --chat--color-medium: #d2d4d9;
+    --chat--color-dark: var(--dark-color);
+    --chat--color-disabled: #d2d4d9;
+    --chat--color-typing: #404040;
 }
 
 /* Tipografías */
@@ -1247,5 +1262,31 @@ footer {
   /* Botón ocupa ambas columnas y se centra */
   #contacto .contact-form .btn {
     grid-column: 1 / -1;
+  }
+}
+
+/* === Widget de chat n8n === */
+
+#n8n-chat-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1200; /* por encima del header (1000) */
+  max-width: 380px;
+  width: 100%;
+  pointer-events: none; /* el wrapper no bloquea clics fuera del chat */
+}
+
+#n8n-chat-wrapper #n8n-chat {
+  pointer-events: auto; /* el chat sí recibe clics */
+}
+
+/* Ajustes para móviles: chat a ancho casi completo y un poco más alto */
+@media (max-width: 768px) {
+  #n8n-chat-wrapper {
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    max-width: none;
   }
 }
