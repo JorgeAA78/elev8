@@ -191,6 +191,31 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Ejecutar al cargar
 
+    // ========== ANIMACIONES SLIDE PROCESO (MOBILE) ==========
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        const processCards = document.querySelectorAll('.process-card[data-slide]');
+
+        const slideObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Entra en viewport - aplicar animación
+                    entry.target.classList.add('slide-in');
+                } else {
+                    // Sale del viewport - remover para reanimar
+                    entry.target.classList.remove('slide-in');
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        processCards.forEach(card => {
+            slideObserver.observe(card);
+        });
+    }
+
     // ========== AÑO ACTUAL EN FOOTER ==========
     const yearElement = document.querySelector('.copyright');
     if (yearElement) {

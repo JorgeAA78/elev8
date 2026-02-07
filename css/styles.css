@@ -705,6 +705,21 @@ img {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  .process-card[data-slide=left] {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  .process-card[data-slide=right] {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  .process-card.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
 .services {
   background: #1a1a1a;
   position: relative;

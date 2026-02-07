@@ -49,9 +49,9 @@
 
         draw: function () {
             this.distanceFromMouse = distance(this.x, this.y, mouse.x, mouse.y);
-            ctx.strokeStyle = "hsla(" + hue + ", 90%, 50%, 1)";
-            ctx.shadowColor = "hsla(" + hue + ", 100%, 55%, 1)";
-            ctx.shadowBlur = this.size * 2;
+            ctx.strokeStyle = "hsla(" + hue + ", 90%, 50%, 0.3)"; // Opacidad reducida al 30%
+            ctx.shadowColor = "hsla(" + hue + ", 100%, 55%, 0.2)"; // Glow más sutil
+            ctx.shadowBlur = this.size * 1.5; // Blur reducido
             ctx.beginPath();
             ctx.moveTo(this.x + this.size * Math.cos(0), this.y + this.size * Math.sin(0));
 
