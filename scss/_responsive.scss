@@ -1,0 +1,127 @@
+// ====================================
+// AJUSTES RESPONSIVE ESPECÍFICOS
+// ====================================
+
+// Ajustes adicionales para tablet
+@include tablet {
+    .container {
+        padding: 0 $spacing-md;
+    }
+
+    .section {
+        padding: $spacing-xl 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+// Ajustes adicionales para mobile
+@include mobile {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 $spacing-sm;
+    }
+
+    .section {
+        padding: $spacing-lg 0;
+    }
+
+    // Ocultar elementos en mobile
+    .hide-mobile {
+        display: none !important;
+    }
+
+    // Mostrar solo en mobile
+    .show-mobile {
+        display: block !important;
+    }
+
+    // Texto centrado en mobile
+    .text-center-mobile {
+        text-align: center;
+    }
+
+    // Stack en mobile
+    .stack-mobile {
+        flex-direction: column;
+    }
+}
+
+// Utilidades responsive
+.show-mobile {
+    display: none;
+}
+
+.hide-tablet-down {
+    @include tablet {
+        display: none !important;
+    }
+
+    @include mobile {
+        display: none !important;
+    }
+}
+
+// Ajustes de espaciado responsive
+@include mobile {
+    .mb-mobile-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .mb-mobile-2 {
+        margin-bottom: $spacing-sm !important;
+    }
+
+    .mb-mobile-4 {
+        margin-bottom: $spacing-lg !important;
+    }
+}
+
+// Imágenes responsive
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+// Grid responsive utilities
+.grid-responsive {
+    display: grid;
+    gap: $spacing-lg;
+
+    &.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+}

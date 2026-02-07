@@ -1,0 +1,131 @@
+// ====================================
+// SECCIÓN SOLUCIONES DIGITALES
+// ====================================
+
+.solutions {
+    background: $primary;
+}
+
+.solutions-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+    align-items: center;
+    margin-bottom: $spacing-xxl;
+
+    @include tablet {
+        gap: $spacing-xl;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.solutions-text {
+    h2 {
+        color: $text-light;
+        margin-bottom: $spacing-md;
+
+        .highlight {
+            color: $accent;
+        }
+    }
+
+    p {
+        color: $text-muted;
+        line-height: 1.8;
+        margin-bottom: $spacing-lg;
+    }
+
+    .solutions-features {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+
+        @include mobile {
+            align-items: center;
+        }
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        color: $text-muted;
+
+        i {
+            color: $accent;
+            font-size: 1rem;
+        }
+    }
+}
+
+.solutions-image {
+    position: relative;
+
+    img {
+        border-radius: $border-radius-lg;
+        @include glow-effect;
+    }
+
+    @include mobile {
+        order: -1;
+    }
+}
+
+// Grid de soluciones/servicios adicionales
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.solution-card {
+    @include glass-card;
+    padding: $spacing-lg;
+    display: flex;
+    gap: $spacing-md;
+    @include transition;
+
+    &:hover {
+        transform: translateX(5px);
+        border-color: rgba($accent, 0.3);
+
+        .solution-icon {
+            background: $accent;
+            color: $primary;
+        }
+    }
+}
+
+.solution-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    @include flex-center;
+    background: rgba($accent, 0.1);
+    border-radius: $border-radius-md;
+    color: $accent;
+    font-size: 1.25rem;
+    @include transition;
+}
+
+.solution-content {
+    h4 {
+        color: $text-light;
+        margin-bottom: $spacing-xs;
+        font-size: 1.1rem;
+    }
+
+    p {
+        color: $text-muted;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,163 @@
+// ====================================
+// SECCIÓN DE CONTACTO
+// ====================================
+
+.contact {
+    background: $secondary;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+
+    @include tablet {
+        gap: $spacing-xl;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-info {
+    h3 {
+        color: $text-light;
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        color: $text-muted;
+        margin-bottom: $spacing-xl;
+        line-height: 1.8;
+    }
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+
+    .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        @include flex-center;
+        background: rgba($accent, 0.1);
+        border-radius: $border-radius-md;
+        color: $accent;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+    }
+
+    .contact-text {
+        h4 {
+            color: $text-light;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        p {
+            color: $text-muted;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        a {
+            color: $accent;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Formulario de contacto
+.contact-form {
+    @include glass-card;
+    padding: $spacing-xl;
+}
+
+.form-group {
+    margin-bottom: $spacing-md;
+
+    label {
+        display: block;
+        color: $text-light;
+        font-size: 0.9rem;
+        margin-bottom: $spacing-xs;
+        font-weight: 500;
+
+        .optional {
+            color: $text-muted;
+            font-weight: 400;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.form-control {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    background: rgba($primary, 0.5);
+    border: 1px solid rgba($text-light, 0.1);
+    border-radius: $border-radius-md;
+    color: $text-light;
+    font-size: 1rem;
+    @include transition;
+
+    &::placeholder {
+        color: $text-muted;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $accent;
+        box-shadow: 0 0 0 3px rgba($accent, 0.1);
+    }
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Redes sociales
+.social-links {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-xl;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    @include flex-center;
+    background: rgba($text-light, 0.1);
+    border-radius: $border-radius-md;
+    color: $text-light;
+    font-size: 1.25rem;
+    @include transition;
+
+    &:hover {
+        background: $accent;
+        color: $primary;
+        transform: translateY(-3px);
+    }
+}

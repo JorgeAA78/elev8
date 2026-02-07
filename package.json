@@ -1,0 +1,17 @@
+{
+  "name": "landing-page1",
+  "version": "1.0.0",
+  "description": "Bienvenido a mi portfolio personal donde muestro mis proyectos y habilidades como desarrollador web.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/styles.css",
+    "sass:watch": "sass --watch scss/main.scss css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

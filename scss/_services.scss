@@ -1,0 +1,111 @@
+// ====================================
+// SECCIÓN DE SERVICIOS
+// ====================================
+
+.services {
+    background: $secondary;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba($accent, 0.3), transparent);
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-lg;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    @include glass-card;
+    padding: $spacing-xl;
+    text-align: center;
+    @include transition;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $accent;
+        transform: scaleX(0);
+        @include transition;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        @include glow-effect;
+
+        &::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            @include glow-text;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: $accent;
+    margin-bottom: $spacing-md;
+    @include transition;
+    display: inline-block;
+}
+
+.service-title {
+    color: $text-light;
+    margin-bottom: $spacing-sm;
+}
+
+.service-description {
+    color: $text-muted;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+// Variante de servicios con iconos en línea
+.services-inline {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-xl;
+    flex-wrap: wrap;
+    padding: $spacing-lg 0;
+
+    .service-item {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        color: $text-muted;
+
+        i {
+            color: $accent;
+            font-size: 1.25rem;
+        }
+
+        &:hover {
+            color: $text-light;
+        }
+    }
+}

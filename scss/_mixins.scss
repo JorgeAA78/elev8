@@ -1,0 +1,109 @@
+// ====================================
+// MIXINS REUTILIZABLES
+// ====================================
+
+// Breakpoints responsive
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+// Flexbox helpers
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Efecto glow para el color accent
+@mixin glow-effect($color: $accent) {
+    box-shadow: 0 0 10px rgba($color, 0.3),
+        0 0 20px rgba($color, 0.2),
+        0 0 30px rgba($color, 0.1);
+}
+
+@mixin glow-text($color: $accent) {
+    text-shadow: 0 0 10px rgba($color, 0.5),
+        0 0 20px rgba($color, 0.3);
+}
+
+// Transiciones
+@mixin transition($property: all) {
+    transition: $property $transition-normal;
+}
+
+// Gradientes
+@mixin gradient-dark {
+    background: linear-gradient(180deg, $primary 0%, $secondary 100%);
+}
+
+@mixin gradient-accent {
+    background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
+}
+
+// Cards estilo glassmorphism
+@mixin glass-card {
+    background: rgba($secondary, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($text-light, 0.1);
+    border-radius: $border-radius-lg;
+}
+
+// Botón base
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius-md;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    @include transition;
+    border: none;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Tipografía responsiva
+@mixin responsive-font($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+    font-size: clamp(#{$min-size}, calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))), #{$max-size});
+}

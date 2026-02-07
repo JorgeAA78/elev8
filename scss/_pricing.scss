@@ -1,0 +1,150 @@
+// ====================================
+// SECCIÓN OFERTA DE LANZAMIENTO
+// ====================================
+
+.pricing {
+    background: $primary;
+}
+
+// Wrapper de la promoción
+.promo-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+    align-items: center;
+
+    @include tablet {
+        gap: $spacing-xl;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+// Lado izquierdo - Oferta
+.promo-offer {
+    @include mobile {
+        order: 1;
+    }
+}
+
+.promo-badge {
+    display: inline-block;
+    color: #ff4444;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: $spacing-md;
+}
+
+.promo-title {
+    font-family: $font-heading;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: $text-light;
+    margin-bottom: $spacing-lg;
+    line-height: 1.1;
+}
+
+.promo-price {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
+.price-amount {
+    font-family: $font-heading;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    color: #ff4444;
+    line-height: 1;
+}
+
+.price-off {
+    display: inline-block;
+    background: #ff4444;
+    color: $text-light;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: $border-radius-md;
+    text-transform: uppercase;
+}
+
+// Lado derecho - Beneficios
+.promo-benefits {
+    @include glass-card;
+    padding: $spacing-xl;
+
+    @include mobile {
+        order: 2;
+    }
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        color: $text-light;
+        font-size: 1rem;
+
+        @include mobile {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        i {
+            color: $accent;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.btn-promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    width: 100%;
+    padding: $spacing-md $spacing-xl;
+    background: #ff4444;
+    color: $text-light;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+        background: #ff6666;
+        color: $text-light;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
+    }
+
+    i {
+        font-size: 0.875rem;
+    }
+}
+
+.promo-disclaimer {
+    color: $text-muted;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: $spacing-md;
+    margin-bottom: 0;
+}

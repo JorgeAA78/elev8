@@ -1,0 +1,238 @@
+// ====================================
+// SECCIÓN PORTFOLIO / PROYECTOS
+// ====================================
+
+.portfolio {
+    background: $secondary;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-lg;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio-card {
+    @include glass-card;
+    overflow: hidden;
+    @include transition;
+
+    &:hover {
+        transform: translateY(-10px);
+        @include glow-effect;
+
+        .portfolio-image img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.portfolio-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include transition;
+    }
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($primary, 0.85);
+    @include flex-center;
+    opacity: 0;
+    @include transition;
+
+    .overlay-content {
+        text-align: center;
+        padding: $spacing-md;
+    }
+
+    .btn {
+        margin-top: $spacing-sm;
+    }
+}
+
+.portfolio-info {
+    padding: $spacing-md;
+}
+
+.portfolio-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: $accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-xs;
+}
+
+.portfolio-title {
+    color: $text-light;
+    font-size: 1.1rem;
+    margin-bottom: $spacing-xs;
+}
+
+.portfolio-description {
+    color: $text-muted;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+// Tags de tecnología
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin-top: $spacing-sm;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background: rgba($accent, 0.1);
+    color: $accent;
+    border-radius: 20px;
+    border: 1px solid rgba($accent, 0.2);
+}
+
+// Filtros de portfolio
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+
+    .filter-btn {
+        padding: $spacing-xs $spacing-md;
+        background: transparent;
+        border: 1px solid rgba($text-light, 0.2);
+        color: $text-muted;
+        border-radius: $border-radius-md;
+        cursor: pointer;
+        @include transition;
+
+        &:hover,
+        &.active {
+            background: $accent;
+            border-color: $accent;
+            color: $primary;
+        }
+    }
+}
+
+// ====================================
+// TECH STACK INFINITE SCROLL
+// ====================================
+
+.tech-stack-wrapper {
+    margin-top: $spacing-xxl;
+    overflow: hidden;
+    position: relative;
+
+    // Fade effect on edges
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, $secondary, transparent);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, $secondary, transparent);
+    }
+}
+
+.tech-stack-scroll {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tech-stack-track {
+    display: flex;
+    gap: $spacing-xl;
+    animation: scrollTech 25s linear infinite;
+    width: max-content;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes scrollTech {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-md $spacing-lg;
+    background: rgba($primary, 0.5);
+    border: 1px solid rgba($text-light, 0.1);
+    border-radius: $border-radius-md;
+    @include transition;
+    cursor: pointer;
+    min-width: 100px;
+
+    &:hover {
+        border-color: $accent;
+        transform: translateY(-5px);
+
+        i {
+            color: $accent;
+            transform: scale(1.2);
+        }
+    }
+
+    i {
+        font-size: 2rem;
+        color: $text-light;
+        @include transition;
+    }
+
+    span {
+        font-size: 0.85rem;
+        color: $text-muted;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+}

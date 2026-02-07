@@ -4,146 +4,639 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio profesional mostrando mis proyectos y habilidades en desarrollo web">
-    <meta name="theme-color" content="#121212">
-    <title>Mi Portfolio - Inicio</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Elev8 - Agencia Digital | Diseño Web, SEO y Marketing Digital</title>
+    <meta name="description"
+        content="Eleva tu presencia digital con Elev8. Especialistas en diseño web, SEO, desarrollo y marketing digital. +40 proyectos exitosos. Transformamos tu visión en realidad.">
+    <meta name="keywords"
+        content="agencia digital, diseño web, SEO, marketing digital, desarrollo web, tienda online, ecommerce, automatizaciones, chatbots, asistentes virtuales">
+    <meta name="author" content="Elev8 Digital">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f0f0f">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tudominio.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com/">
+    <meta property="og:title" content="Elev8 - Agencia Digital | Diseño Web, SEO y Marketing Digital">
+    <meta property="og:description"
+        content="Eleva tu presencia digital con Elev8. Especialistas en diseño web, SEO, desarrollo y marketing digital. +40 proyectos exitosos.">
+    <meta property="og:image" content="https://tudominio.com/images/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tudominio.com/">
+    <meta name="twitter:title" content="Elev8 - Agencia Digital | Diseño Web, SEO y Marketing Digital">
+    <meta name="twitter:description"
+        content="Eleva tu presencia digital con Elev8. Especialistas en diseño web, SEO y marketing digital.">
+    <meta name="twitter:image" content="https://tudominio.com/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f0f0f'/><text y='.9em' font-size='90' fill='%2300ff88'>8</text></svg>">
 
     <!-- Preload de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Hojas de estilo -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Estilos personalizados (compilados desde SASS) -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23121212'/><rect x='20' y='20' width='60' height='60' fill='%23a6a6a6'/><rect x='30' y='30' width='40' height='40' fill='%23f5f5f5'/></svg>">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tudominio.com/">
-    <meta property="og:title" content="Mi Portfolio - Desarrollador Web">
-    <meta property="og:description"
-        content="Portfolio profesional mostrando mis proyectos y habilidades en desarrollo web">
-    <meta property="og:image" content="https://tudominio.com/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://tudominio.com/">
-    <meta name="twitter:title" content="Mi Portfolio - Desarrollador Web">
-    <meta name="twitter:description"
-        content="Portfolio profesional mostrando mis proyectos y habilidades en desarrollo web">
-    <meta name="twitter:image" content="https://tudominio.com/images/og-image.jpg">
 </head>
 
 <body>
-    <header id="header">
-        <!-- El header se cargará dinámicamente con JavaScript -->
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Elev<span>8</span></a>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#servicios" class="nav-link">Diseño</a>
+                <a href="#soluciones" class="nav-link">SEO</a>
+                <a href="#contacto" class="nav-link">Soporte</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#precios" class="nav-link">Precios</a>
+            </nav>
+
+            <a href="#contacto" class="btn btn-primary header-cta">Contáctanos</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Bienvenido a mi Portfolio</h1>
-                <p>Desarrollador Web Full Stack</p>
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero" id="inicio">
+            <!-- Canvas animado de fondo -->
+            <canvas id="canvas-club"></canvas>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Agencia Digital Premium</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Eleva tu<br>
+                    <span class="highlight">Presencia Digital</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Transformamos ideas en experiencias digitales únicas. Diseño web, SEO y estrategias de marketing que
+                    impulsan tu negocio al siguiente nivel.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">
+                        <i class="fas fa-rocket me-2"></i>Comenzar Ahora
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline">
+                        <i class="fas fa-eye me-2"></i>Ver Proyectos
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">Diseño</span>
+                        <span class="stat-label">Moderno</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">SEO</span>
+                        <span class="stat-label">Inicial</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Soporte</span>
+                        <span class="stat-label">Post-Venta </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <a href="#proceso">
+                    <span>Scroll</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
 
-        <section id="presentacion" class="section">
+        <!-- ========== SERVICIOS ========== -->
+        <section class="services section" id="servicios">
             <div class="container">
-                <div class="about-container">
-                    <div class="about-image">
-                        <img src="images/profile.jpg" alt="#" class="profile-image">
+                <div class="section-title">
+                    <h2>Transforma tu <span class="text-accent">Visión</span> en Realidad</h2>
+                    <p>En Elev 8 somos un equipo de desarrolladores especializados en transformar ideas en productos
+                        digitales funcionales y estratégicos. Diseñamos y desarrollamos sitios web, landing pages y
+                        sistemas a medida que ayudan a negocios y profesionales a fortalecer su presencia online con una
+                        propuesta moderna, clara y efectiva.
+
+                        Combinamos diseño, rendimiento y un acompañamiento cercano en cada etapa del proceso,
+                        garantizando un desarrollo ágil, transparente y siempre orientado a objetivos. Ofrecemos
+                        soluciones digitales integrales pensadas para impulsar tu proyecto y llevarlo al siguiente
+                        nivel.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-palette service-icon"></i>
+                        <h3 class="service-title">Diseño</h3>
+                        <p class="service-description">Creamos diseños únicos y atractivos que reflejan la identidad de
+                            tu marca y cautivan a tu audiencia.</p>
                     </div>
-                    <div id="about-content" class="about-content">
-                        <!-- Contenido cargado desde Contentful -->
+
+                    <div class="service-card">
+                        <i class="fas fa-search service-icon"></i>
+                        <h3 class="service-title">SEO</h3>
+                        <p class="service-description">Optimizamos tu presencia en buscadores para que tus clientes te
+                            encuentren fácilmente.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-headset service-icon"></i>
+                        <h3 class="service-title">Soporte</h3>
+                        <p class="service-description">Brindamos soporte continuo para mantener tu sitio web funcionando
+                            de manera óptima 24/7.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="servicios" class="section bg-light">
+        <!-- ========== PROCESO ========== -->
+        <section class="process section" id="proceso">
             <div class="container">
-                <h2>Mis Servicios</h2>
-                <div id="services-content" class="services-grid">
-                    <!-- Servicios cargados desde Contentful -->
+                <div class="section-title">
+                    <span class="section-subtitle">— NUESTRO PROCESO</span>
+                    <h2>De la idea al <span class="text-accent">lanzamiento</span></h2>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-card">
+                        <h3 class="process-title">Análisis</h3>
+                        <p class="process-description">
+                            Conversamos sobre tu idea, tus objetivos y el tipo de proyecto que necesitás.
+                            Definimos si lo mejor para vos es una landing, un sitio institucional,
+                            una web personal o un desarrollo a medida.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <h3 class="process-title">Diseño</h3>
+                        <p class="process-description">
+                            Creamos un diseño moderno, claro y alineado con tu marca. Te presentamos
+                            prototipos visuales para que puedas ver la estética y estructura final
+                            de tu web antes de avanzar al desarrollo.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <h3 class="process-title">Desarrollo técnico</h3>
+                        <p class="process-description">
+                            Trabajamos con la tecnología que mejor se adapta a tu proyecto. Según cada
+                            necesidad, podemos desarrollar soluciones a medida con código o utilizar
+                            herramientas low-code como WordPress para optimizar tiempos y presupuesto.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <h3 class="process-title">Lanzamiento</h3>
+                        <p class="process-description">
+                            Subimos tu sitio y lo dejamos funcionando al 100%, optimizado y listo para
+                            recibir visitas desde el primer día. Ajustamos los últimos detalles para
+                            asegurar una experiencia fluida y profesional.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto" class="section">
+        <!-- ========== SOLUCIONES ========== -->
+        <section class="solutions section" id="soluciones">
             <div class="container">
-                <h2>Contacto</h2>
-                <div class="contact-form">
-                    <form id="contact-form">
+                <div class="section-title">
+                    <h2>Soluciones Digitales a tu <span class="text-accent">Medida</span></h2>
+                    <p>Servicios especializados para cada necesidad de tu negocio</p>
+                </div>
+
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="solution-content">
+                            <h4>Web + Tienda Online</h4>
+                            <p>Sitios web profesionales y ecommerce que convierten visitantes en clientes.</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="solution-content">
+                            <h4>Automatizaciones</h4>
+                            <p>Optimiza tus procesos con flujos de trabajo automatizados e inteligentes.</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="solution-content">
+                            <h4>Asistentes Virtuales</h4>
+                            <p>Chatbots y asistentes IA que atienden a tus clientes 24/7.</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="solution-content">
+                            <h4>Marketing Digital</h4>
+                            <p>Estrategias de marketing que aumentan tu visibilidad y ventas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PORTFOLIO ========== -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Proyectos que <span class="text-accent">Inspiran</span></h2>
+                    <p>Conoce algunos de nuestros trabajos más destacados</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/Ecommerce.webp" alt="Proyecto ecommerce de moda" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-primary btn-sm">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Ecommerce</span>
+                            <h3 class="portfolio-title">Tienda Online</h3>
+                            <p class="portfolio-description">Desarrollo completo de tienda online con integración de
+                                pagos.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">WooCommerce</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/Web Design.webp" alt="Landing page corporativa" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-primary btn-sm">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Web Corporativa</span>
+                            <h3 class="portfolio-title">Sitio Empresarial</h3>
+                            <p class="portfolio-description">Diseño moderno y responsive para empresa de servicios.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/Asistentes virtuales.webp" alt="Aplicación de automatización"
+                                loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-primary btn-sm">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Automatización</span>
+                            <h3 class="portfolio-title">Sistema de Chatbot</h3>
+                            <p class="portfolio-description">Asistente virtual inteligente con integración WhatsApp.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">n8n</span>
+                                <span class="tag">IA</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Tech Stack Infinite Scroll -->
+                <div class="tech-stack-wrapper">
+                    <div class="tech-stack-scroll">
+                        <div class="tech-stack-track">
+                            <!-- Primera copia -->
+                            <div class="tech-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>n8n</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>TypeScript</span>
+                            </div>
+                            <!-- Segunda copia para loop continuo -->
+                            <div class="tech-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>n8n</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== OFERTA DE LANZAMIENTO ========== -->
+        <section class="pricing section" id="precios">
+            <div class="container">
+                <div class="promo-wrapper">
+                    <!-- Lado izquierdo - Oferta -->
+                    <div class="promo-offer">
+                        <span class="promo-badge">PRIMEROS 5 CLIENTES DE LA NUEVA WEB</span>
+                        <h2 class="promo-title">¡Oferta de Lanzamiento!</h2>
+                        <div class="promo-price">
+                            <span class="price-amount">$50 USD</span>
+                            <span class="price-off">OFF</span>
+                        </div>
+                    </div>
+
+                    <!-- Lado derecho - Beneficios -->
+                    <div class="promo-benefits">
+                        <ul class="benefits-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Diseño web profesional</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Desarrollo responsive</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>SEO básico incluido</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Soporte 15 días gratis</span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-promo">
+                            Quiero mi descuento <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <p class="promo-disclaimer">*Válido para proyectos nuevos. Cupos limitados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section class="contact section" id="contacto">
+            <div class="container">
+                <div class="section-title">
+                    <h2>¿Listo para <span class="text-accent">Comenzar</span>?</h2>
+                    <p>Contáctanos y transformemos juntos tu presencia digital</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Hablemos de tu proyecto</h3>
+                        <p>Estamos aquí para ayudarte a llevar tu negocio al siguiente nivel. Contáctanos y te
+                            responderemos en menos de 24 horas.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <p><a href="infosoporte25@gmail.com">infosoporte25@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon-wrapper">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/+541161966833">+541161966833</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Ubicación</h4>
+                                    <p>Trabajo remoto mundial</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Nombre" required>
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Tu nombre"
+                                required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com"
+                                required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+                            <label for="phone">Tu Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-control"
+                                placeholder="+54 11 1234-5678" required>
                         </div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
+                        <div class="form-group">
+                            <label for="brand">Nombre de tu marca o negocio <span
+                                    class="optional">(opcional)</span></label>
+                            <input type="text" id="brand" name="brand" class="form-control"
+                                placeholder="Tu empresa o proyecto">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                        </button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer">
-        <!-- El footer se cargará dinámicamente con JavaScript -->
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Elev<span>8</span></div>
+                    <p>Elevamos tu presencia digital con soluciones innovadoras y diseño de alta calidad.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Diseño Web</a></li>
+                        <li><a href="#servicios">SEO</a></li>
+                        <li><a href="#soluciones">Ecommerce</a></li>
+                        <li><a href="#soluciones">Automatizaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Elev8. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Contenedor del chat de n8n -->
-    <div id="n8n-chat-wrapper">
-        <div id="n8n-chat"></div>
+    <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</span>
+        <a href="https://wa.me/+541161966833?text=Hola%21%20Me%20interesa%20saber%20más%20sobre%20sus%20servicios"
+            class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
-    <script src="js/header.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/api.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript personalizado -->
     <script src="js/main.js"></script>
 
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    <!-- Canvas animado Hero -->
+    <script src="js/hero-canvas.js"></script>
 
-        createChat({
-            webhookUrl: 'https://n8ncurso2025-n8n.mos4xj.easypanel.host/webhook/4623630c-0aab-4bf4-9096-9699fab72a42/chat',
-            webhookConfig: {
-                method: 'POST',
-                headers: {}
-            },
-            target: '#n8n-chat',
-            mode: 'window',
-            chatInputKey: 'chatInput',
-            chatSessionKey: 'sessionId',
-            loadPreviousSession: true,
-            metadata: {},
-            showWelcomeScreen: false,
-            defaultLanguage: 'es',
-            initialMessages: [
-                'Hola! 👋',
-                'Mi nombre es Jor. En que te puedo ayudar?'
-            ],
-            i18n: {
-                es: {
-                    title: 'Hola! 👋',
-                    subtitle: 'Inicia un chat. Estoy aqui para ayudarte  24/7.',
-                    footer: '',
-                    getStarted: 'New Conversation',
-                    inputPlaceholder: 'Pregunta lo que quieras.',
-                },
-            },
-            enableStreaming: false,
-        });
-    </script>
 </body>
 
 </html>
