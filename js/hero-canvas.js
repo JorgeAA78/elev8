@@ -27,7 +27,7 @@
     mouse.x = mouse.tx = w / 2;
     mouse.y = mouse.ty = h / 2;
 
-    var clearColor = "rgba(15, 15, 15, 0.95)"; // Mismo que $primary: #0f0f0f
+    var clearColor = "rgba(15, 15, 15, 0.95)"; // Fondo negro con trail de hexágonos
 
     function random(min, max) {
         return Math.random() * (max - min) + min;

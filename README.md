@@ -13,7 +13,8 @@ Landing page responsive para **Elev8 Digital**, una agencia especializada en des
 
 - 🎨 **Diseño moderno** - Dark mode con acentos verdes neón
 - 📱 **100% Responsive** - Adaptado para todos los dispositivos
-- ⚡ **Animaciones interactivas** - Canvas con hexágonos animados, scroll infinito de tecnologías
+- ⚡ **Animaciones interactivas** - Scroll infinito de tecnologías
+- 🔷 **Canvas con hexágonos animados** - Partículas interactivas que siguen el cursor en el hero section
 - 📝 **Formulario funcional** - Integración con Formspree
 - 🔍 **SEO optimizado** - Meta tags, Open Graph, Schema.org
 - 💬 **Chat integrado** - Soporte para widget n8n
