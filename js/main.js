@@ -100,10 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveLink);
 
     // ========== EMAILJS — CONFIGURACIÓN ==========
-    // ⚠️ REEMPLAZÁ estos 3 valores con los de tu cuenta de EmailJS:
-    const EMAILJS_PUBLIC_KEY = 'eRmiVDn5KJCapo4ua';      // Account → Public Key
-    const EMAILJS_SERVICE_ID = 'service_29c3bkb';      // Email Services → Service ID
-    const EMAILJS_TEMPLATE_ID = 'template_apkg4ah';    // Email Templates → Template ID
+    // ⚠️ REEMPLAZÁ estos valores con los de tu cuenta de EmailJS:
+    const EMAILJS_PUBLIC_KEY = 'eRmiVDn5KJCapo4ua';
+    const EMAILJS_SERVICE_ID = 'service_29c3bkb';
+    const EMAILJS_TEMPLATE_ADMIN = 'template_apkg4ah';          // Template → notificación al admin
+    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_fdwvjfg'; // Template → auto-respuesta al usuario
 
     // Inicializar EmailJS
     emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -138,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             try {
-                // Parámetros que se envían al template de EmailJS
+                // Parámetros que se envían a ambos templates
                 const templateParams = {
                     from_name: name,        // {{from_name}} en el template
                     to_email: email,         // {{to_email}} en el template
@@ -147,7 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     message: message         // {{message}} en el template
                 };
 
-                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+                // Enviar los 2 emails en paralelo:
+                // 1) Notificación al admin (vos)
+                // 2) Auto-respuesta al usuario
+                await Promise.all([
+                    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ADMIN, templateParams),
+                    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, templateParams)
+                ]);
 
                 // Éxito
                 submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Mensaje Enviado!';
