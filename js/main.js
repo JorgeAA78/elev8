@@ -99,6 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateActiveLink);
 
+    // ========== EMAILJS — CONFIGURACIÓN ==========
+    // ⚠️ REEMPLAZÁ estos 3 valores con los de tu cuenta de EmailJS:
+    const EMAILJS_PUBLIC_KEY = 'eRmiVDn5KJCapo4ua';      // Account → Public Key
+    const EMAILJS_SERVICE_ID = 'service_29c3bkb';      // Email Services → Service ID
+    const EMAILJS_TEMPLATE_ID = 'template_apkg4ah';    // Email Templates → Template ID
+
+    // Inicializar EmailJS
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
     // ========== FORMULARIO DE CONTACTO ==========
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -111,6 +120,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const brand = formData.get('brand') || 'No especificado';
             const message = formData.get('message');
 
+            // 🛡️ Honeypot anti-bot: si el campo oculto tiene valor, es un bot
+            const honeypot = formData.get('website');
+            if (honeypot) {
+                // Simular éxito sin enviar nada (el bot no se entera)
+                const fakeBtn = contactForm.querySelector('button[type="submit"]');
+                fakeBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Mensaje Enviado!';
+                contactForm.reset();
+                return;
+            }
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
 
@@ -119,36 +138,30 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             try {
-                const response = await fetch('https://formspree.io/f/xdklylwo', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        phone,
-                        brand,
-                        message: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nMarca/Negocio: ${brand}\n\nMensaje:\n${message}`
-                    })
-                });
+                // Parámetros que se envían al template de EmailJS
+                const templateParams = {
+                    from_name: name,        // {{from_name}} en el template
+                    to_email: email,         // {{to_email}} en el template
+                    phone: phone,            // {{phone}} en el template
+                    brand: brand,            // {{brand}} en el template
+                    message: message         // {{message}} en el template
+                };
 
-                if (response.ok) {
-                    // Éxito
-                    submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Mensaje Enviado!';
-                    submitBtn.classList.remove('btn-primary');
-                    submitBtn.classList.add('btn-success');
-                    contactForm.reset();
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
 
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalBtnText;
-                        submitBtn.classList.remove('btn-success');
-                        submitBtn.classList.add('btn-primary');
-                        submitBtn.disabled = false;
-                    }, 3000);
-                } else {
-                    throw new Error('Error en el envío');
-                }
+                // Éxito
+                submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>¡Mensaje Enviado!';
+                submitBtn.classList.remove('btn-primary');
+                submitBtn.classList.add('btn-success');
+                contactForm.reset();
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.classList.remove('btn-success');
+                    submitBtn.classList.add('btn-primary');
+                    submitBtn.disabled = false;
+                }, 3000);
+
             } catch (error) {
                 console.error('Error al enviar el formulario:', error);
                 submitBtn.innerHTML = '<i class="fas fa-times me-2"></i>Error al enviar';
