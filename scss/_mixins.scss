@@ -1,6 +1,7 @@
 // ====================================
 // MIXINS REUTILIZABLES
 // ====================================
+@use 'variables' as *;
 
 // Breakpoints responsive
 @mixin mobile {

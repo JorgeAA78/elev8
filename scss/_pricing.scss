@@ -1,6 +1,8 @@
 // ====================================
 // SECCIÓN OFERTA DE LANZAMIENTO
 // ====================================
+@use 'variables' as *;
+@use 'mixins' as *;
 
 .pricing {
     background: $primary;

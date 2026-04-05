@@ -1,6 +1,8 @@
 // ====================================
 // HEADER Y NAVEGACIÓN
 // ====================================
+@use 'variables' as *;
+@use 'mixins' as *;
 
 .header {
     position: fixed;
@@ -96,6 +98,12 @@
 
     @include mobile {
         font-size: 1.25rem;
+        color: $accent;
+
+        &:hover,
+        &.active {
+            color: $accent-dark;
+        }
     }
 }
 

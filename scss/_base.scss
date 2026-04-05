@@ -1,6 +1,9 @@
 // ====================================
 // ESTILOS BASE - RESET Y TIPOGRAFÍA
 // ====================================
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 // Reset básico
 *,
@@ -63,7 +66,7 @@ a {
     @include transition;
 
     &:hover {
-        color: lighten($accent, 10%);
+        color: color.adjust($accent, $lightness: 10%);
     }
 }
 
@@ -164,7 +167,7 @@ img {
     border: 1px solid rgba($text-light, 0.2);
 
     &:hover {
-        background: lighten($secondary, 5%);
+        background: color.adjust($secondary, $lightness: 5%);
         border-color: $accent;
     }
 }

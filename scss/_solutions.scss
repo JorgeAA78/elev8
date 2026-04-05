@@ -1,6 +1,8 @@
 // ====================================
 // SECCIÓN SOLUCIONES DIGITALES
 // ====================================
+@use 'variables' as *;
+@use 'mixins' as *;
 
 .solutions {
     background: $primary;

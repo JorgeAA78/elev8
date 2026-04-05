@@ -4,33 +4,31 @@
 // Compilar con: npm run sass
 // Watch mode: npm run sass:watch
 
-// 1. Variables y configuración
-@import 'variables';
-
-// 2. Mixins y funciones
-@import 'mixins';
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 // 3. Estilos base (reset, tipografía, utilidades)
-@import 'base';
+@use 'base';
 
 // 4. Componentes del layout
-@import 'header';
-@import 'footer';
+@use 'header';
+@use 'footer';
 
 // 5. Secciones de la página
-@import 'hero';
-@import 'process';
-@import 'services';
-@import 'solutions';
-@import 'portfolio';
-@import 'pricing';
-@import 'contact';
+@use 'hero';
+@use 'process';
+@use 'services';
+@use 'solutions';
+@use 'portfolio';
+@use 'pricing';
+@use 'contact';
 
 // 6. Componentes flotantes
-@import 'whatsapp';
+@use 'whatsapp';
 
 // 7. Ajustes responsive
-@import 'responsive';
+@use 'responsive';
 
 // ====================================
 // ESTILOS ADICIONALES DEL CHAT N8N
@@ -44,14 +42,14 @@
 // Variables del chat n8n adaptadas al tema
 :root {
     --chat--color--primary: #{$primary};
-    --chat--color--primary-shade-50: #{darken($primary, 5%)};
-    --chat--color--primary--shade-100: #{darken($primary, 10%)};
+    --chat--color--primary-shade-50: #{color.adjust($primary, $lightness: -5%)};
+    --chat--color--primary--shade-100: #{color.adjust($primary, $lightness: -10%)};
     --chat--color--secondary: #{$accent};
-    --chat--color-secondary-shade-50: #{darken($accent, 10%)};
+    --chat--color-secondary-shade-50: #{color.adjust($accent, $lightness: -10%)};
     --chat--color-white: #{$text-light};
     --chat--color-light: #{$secondary};
-    --chat--color-light-shade-50: #{lighten($secondary, 5%)};
-    --chat--color-light-shade-100: #{lighten($secondary, 10%)};
+    --chat--color-light-shade-50: #{color.adjust($secondary, $lightness: 5%)};
+    --chat--color-light-shade-100: #{color.adjust($secondary, $lightness: 10%)};
     --chat--color-medium: #{$text-muted};
     --chat--color-dark: #{$primary};
     --chat--color-disabled: #{$text-muted};

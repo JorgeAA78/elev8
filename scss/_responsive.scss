@@ -1,6 +1,8 @@
 // ====================================
 // AJUSTES RESPONSIVE ESPECÍFICOS
 // ====================================
+@use 'variables' as *;
+@use 'mixins' as *;
 
 // Ajustes adicionales para tablet
 @include tablet {

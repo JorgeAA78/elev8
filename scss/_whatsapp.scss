@@ -1,6 +1,8 @@
 // ====================================
 // BOTÓN FLOTANTE DE WHATSAPP
 // ====================================
+@use 'variables' as *;
+@use 'mixins' as *;
 
 .whatsapp-float {
     position: fixed;
