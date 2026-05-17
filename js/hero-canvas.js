@@ -108,13 +108,13 @@
         mouse.ty = h / 2;
     };
 
+    // Restringir gestos táctiles en el canvas: solo permitir scroll vertical
+    c.style.touchAction = "pan-y";
+
     // Event listeners solo para el hero section
     heroSection.addEventListener("mousemove", mouse.touches);
     heroSection.addEventListener("touchstart", mouse.touches, { passive: true });
-    heroSection.addEventListener("touchmove", function(e) {
-        e.preventDefault();
-        mouse.touches(e);
-    }, { passive: false });
+    heroSection.addEventListener("touchmove", mouse.touches, { passive: true });
     c.addEventListener("mouseleave", mouse.mouseleave);
 
     window.addEventListener("resize", function () {
