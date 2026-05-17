@@ -110,8 +110,11 @@
 
     // Event listeners solo para el hero section
     heroSection.addEventListener("mousemove", mouse.touches);
-    heroSection.addEventListener("touchstart", mouse.touches);
-    heroSection.addEventListener("touchmove", mouse.touches);
+    heroSection.addEventListener("touchstart", mouse.touches, { passive: true });
+    heroSection.addEventListener("touchmove", function(e) {
+        e.preventDefault();
+        mouse.touches(e);
+    }, { passive: false });
     c.addEventListener("mouseleave", mouse.mouseleave);
 
     window.addEventListener("resize", function () {
