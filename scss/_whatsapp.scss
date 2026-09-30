@@ -6,12 +6,12 @@
 
 .whatsapp-float {
     position: fixed;
-    bottom: 25px;
+    bottom: 100px;
     right: 25px;
-    z-index: 999;
+    z-index: 1000;
 
     @include mobile {
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
     }
 }
