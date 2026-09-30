@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos de Servicio | Elev8</title>
+  <meta name="description" content="Términos y condiciones de los servicios de diseño y desarrollo web de Elev8.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://elev8-one.vercel.app/terminos.html">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f0f0f'/><text y='.9em' font-size='90' fill='%2300ff88'>8</text></svg>">
+
+  <!-- Google Fonts: Inter & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #171717;
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --muted: #9e9e9e;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #00ff88;
+      --accent-dark: #00cc6a;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: 'Oswald', 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 15, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 1.1rem 1.5rem;
+    }
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s ease;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .logo:hover {
+      opacity: 0.9;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.25s ease;
+    }
+    .back-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      background: rgba(0, 255, 136, 0.08);
+      transform: translateX(-2px);
+    }
+    .back-btn i {
+      font-size: 0.85rem;
+      transition: transform 0.2s ease;
+    }
+    .back-btn:hover i {
+      transform: translateX(-2px);
+    }
+    .wrap {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    main {
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .badge-legal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(0, 255, 136, 0.1);
+      color: var(--accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(0, 255, 136, 0.25);
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lead-text {
+      font-size: 1.15rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.75rem 0 0.9rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--line);
+      letter-spacing: 0.01em;
+    }
+    p {
+      color: #d1d1d1;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1.25rem;
+      color: #d1d1d1;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    li strong {
+      color: #ffffff;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #33ff9f;
+    }
+    .legal-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      color: #c0c0c0;
+      line-height: 1.7;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 1.5rem;
+      background: #090909;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer a {
+      color: var(--muted);
+    }
+    footer a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Elev<span>8</span></a>
+      <a class="back-btn" href="index.html">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver al inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="badge-legal">
+        <i class="fas fa-shield-alt"></i> Marco Legal
+      </div>
+      <h1>Términos de Servicio</h1>
+      <p class="updated"><i class="far fa-calendar-alt"></i> Última actualización: 30 de septiembre de 2026</p>
+
+      <p class="lead-text">Estos términos regulan el uso del sitio web de <strong>Elev8</strong> y la contratación de nuestros servicios de diseño web, desarrollo, tiendas online, SEO, automatizaciones, asistentes virtuales y marketing digital. Al usar el sitio o contratarnos, aceptás estos términos.</p>
+
+      <h2>Quiénes somos</h2>
+      <p>Elev8 es el nombre comercial de <strong>Jorge Ariel Altamirano</strong>, CUIT <strong>20-188180982-2</strong>, con domicilio en Salta, Argentina. Contacto: <a href="mailto:infosoporte25@gmail.com">infosoporte25@gmail.com</a> · WhatsApp <a href="https://wa.me/541161966833" target="_blank" rel="noopener noreferrer">+54 11 6196-6833</a>.</p>
+
+      <h2>Presupuestos y contratación</h2>
+      <ul>
+        <li>Cada proyecto se cotiza de forma personalizada según su alcance. El presupuesto detalla las funcionalidades incluidas, el precio, la forma de pago y los plazos estimados.</li>
+        <li>Los presupuestos tienen una validez de 15 días desde su envío, salvo que se indique otra cosa.</li>
+        <li>El proyecto comienza cuando aceptás el presupuesto por escrito (email o WhatsApp) y se acredita el anticipo acordado.</li>
+        <li>Cualquier funcionalidad no incluida en el presupuesto aprobado se cotiza por separado.</li>
+      </ul>
+
+      <h2>Pagos</h2>
+      <ul>
+        <li>Salvo acuerdo distinto, se abona un anticipo al inicio y el saldo antes de publicar el sitio o entregar el proyecto.</li>
+        <li>Los precios pueden expresarse en dólares estadounidenses (USD) o en pesos argentinos, según se indique en el presupuesto.</li>
+        <li>Los costos de terceros (dominio, hosting, licencias, plugins pagos, APIs, servicios de IA, pasarelas de pago) no están incluidos, salvo que el presupuesto diga lo contrario, y corren por cuenta del cliente.</li>
+      </ul>
+
+      <h2>Proceso y revisiones</h2>
+      <ul>
+        <li>Trabajamos en etapas: análisis, diseño, desarrollo y lanzamiento. Antes del desarrollo te presentamos un prototipo visual para tu aprobación.</li>
+        <li>Cada etapa incluye las rondas de revisión indicadas en el presupuesto. Los cambios adicionales o posteriores a la aprobación pueden tener un costo extra.</li>
+        <li>Los plazos dependen de que nos envíes a tiempo los contenidos (textos, imágenes, logos, accesos). Las demoras en esos envíos extienden el plazo de entrega.</li>
+      </ul>
+
+      <h2>Contenidos del cliente</h2>
+      <p>Sos responsable de que los textos, imágenes, logos y demás materiales que nos entregues te pertenezcan o tengas derecho a usarlos. Elev8 no se responsabiliza por reclamos de terceros derivados de esos contenidos.</p>
+
+      <h2>Propiedad del trabajo</h2>
+      <ul>
+        <li>Una vez abonado el total del proyecto, el diseño y el contenido desarrollado específicamente para vos pasan a ser de tu propiedad.</li>
+        <li>Elev8 conserva los derechos sobre componentes, librerías, plantillas y código reutilizable propios, y te otorga una licencia de uso para tu proyecto.</li>
+        <li>Salvo que nos pidas lo contrario, podemos mostrar el proyecto terminado en nuestro portfolio.</li>
+      </ul>
+
+      <h2>Soporte y garantía</h2>
+      <ul>
+        <li>Cada proyecto incluye un período de soporte post-lanzamiento, cuya duración se indica en el presupuesto. Durante ese período corregimos sin costo errores atribuibles a nuestro desarrollo.</li>
+        <li>Nuevas funcionalidades, cambios de diseño o problemas causados por modificaciones de terceros, del cliente o de servicios externos no están cubiertos por el soporte gratuito.</li>
+        <li>Pasado ese período, ofrecemos planes de mantenimiento a cotizar.</li>
+      </ul>
+
+      <h2>Promociones</h2>
+      <p>Las promociones publicadas en el sitio (por ejemplo, descuentos de lanzamiento) aplican solo a proyectos nuevos, tienen cupos limitados, no son acumulables con otras ofertas y se rigen por las condiciones indicadas en cada una.</p>
+
+      <h2>Cancelación</h2>
+      <p>Si cancelás el proyecto una vez iniciado, el anticipo no es reembolsable, ya que cubre el trabajo realizado. Si el trabajo avanzado supera el valor del anticipo, se facturará la parte proporcional.</p>
+
+      <h2>Limitación de responsabilidad</h2>
+      <p>Elev8 no garantiza resultados específicos de posicionamiento en buscadores, ventas o tráfico, ya que dependen de factores externos. Tampoco es responsable por interrupciones o fallas de servicios de terceros (hosting, dominios, pasarelas de pago, WhatsApp, proveedores de IA). Nuestra responsabilidad máxima se limita al monto abonado por el servicio en cuestión.</p>
+
+      <h2>Uso del sitio</h2>
+      <p>El contenido de este sitio (textos, diseños, imágenes y código) pertenece a Elev8 o se usa con autorización. No podés copiarlo ni reproducirlo sin permiso. El tratamiento de tus datos personales se rige por nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+
+      <h2>Ley aplicable y jurisdicción</h2>
+      <p>Estos términos se rigen por las leyes de la República Argentina. Ante cualquier conflicto, las partes se someten a los tribunales ordinarios de la ciudad de Salta, sin perjuicio de los derechos que te correspondan como consumidor según la Ley N.º 24.240.</p>
+
+      <h2>Cambios en estos términos</h2>
+      <p>Podemos modificar estos términos. Los cambios no afectan proyectos ya contratados, que se rigen por los términos vigentes al momento de aceptar el presupuesto.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Elev8. Todos los derechos reservados.</span>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="privacidad.html">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

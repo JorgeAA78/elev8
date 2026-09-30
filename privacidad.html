@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad | Elev8</title>
+  <meta name="description" content="Política de Privacidad de Elev8: qué datos recopilamos, para qué los usamos y cómo ejercer tus derechos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://elev8-one.vercel.app/privacidad.html">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f0f0f'/><text y='.9em' font-size='90' fill='%2300ff88'>8</text></svg>">
+
+  <!-- Google Fonts: Inter & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #171717;
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --muted: #9e9e9e;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #00ff88;
+      --accent-dark: #00cc6a;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: 'Oswald', 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 15, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 1.1rem 1.5rem;
+    }
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s ease;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .logo:hover {
+      opacity: 0.9;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.25s ease;
+    }
+    .back-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      background: rgba(0, 255, 136, 0.08);
+      transform: translateX(-2px);
+    }
+    .back-btn i {
+      font-size: 0.85rem;
+      transition: transform 0.2s ease;
+    }
+    .back-btn:hover i {
+      transform: translateX(-2px);
+    }
+    .wrap {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    main {
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .badge-legal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(0, 255, 136, 0.1);
+      color: var(--accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(0, 255, 136, 0.25);
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lead-text {
+      font-size: 1.15rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.75rem 0 0.9rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--line);
+      letter-spacing: 0.01em;
+    }
+    p {
+      color: #d1d1d1;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1.25rem;
+      color: #d1d1d1;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    li strong {
+      color: #ffffff;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #33ff9f;
+    }
+    .legal-box {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.95rem;
+      color: #d1d1d1;
+      line-height: 1.7;
+    }
+    .legal-box strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 1.5rem;
+      background: #090909;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer a {
+      color: var(--muted);
+    }
+    footer a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Elev<span>8</span></a>
+      <a class="back-btn" href="index.html">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver al inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="badge-legal">
+        <i class="fas fa-user-shield"></i> Privacidad y Datos
+      </div>
+      <h1>Política de Privacidad</h1>
+      <p class="updated"><i class="far fa-calendar-alt"></i> Última actualización: 30 de septiembre de 2026</p>
+
+      <p class="lead-text">En <strong>Elev8</strong> respetamos tu privacidad. Esta política explica qué datos personales recopilamos cuando usás nuestro sitio web o nos contactás, para qué los usamos y cómo podés ejercer tus derechos, conforme a la Ley N.º 25.326 de Protección de los Datos Personales de la República Argentina.</p>
+
+      <h2>Responsable de los datos</h2>
+      <p>El responsable del tratamiento es <strong>Jorge Ariel Altamirano</strong>, CUIT <strong>20-188180982-2</strong>, que opera bajo el nombre comercial <strong>Elev8</strong>, con domicilio en Salta, Argentina. Podés contactarnos en <a href="mailto:infosoporte25@gmail.com">infosoporte25@gmail.com</a>.</p>
+
+      <h2>Qué datos recopilamos</h2>
+      <ul>
+        <li><strong>Datos que nos das vos:</strong> nombre, email, teléfono, nombre de tu marca o negocio y el contenido de tu mensaje, cuando completás el formulario de contacto o nos escribís por WhatsApp o email.</li>
+        <li><strong>Conversaciones con nuestro asistente virtual:</strong> si usás el chat del sitio, guardamos los mensajes para responderte y mejorar el servicio.</li>
+        <li><strong>Datos técnicos:</strong> información básica de navegación (tipo de dispositivo, navegador, páginas visitadas) que pueden registrar nuestro proveedor de hosting o herramientas de analítica.</li>
+      </ul>
+
+      <h2>Para qué usamos tus datos</h2>
+      <ul>
+        <li>Responder tus consultas y preparar presupuestos.</li>
+        <li>Coordinar y ejecutar los proyectos que nos contrates.</li>
+        <li>Enviarte información relacionada con tu consulta o proyecto.</li>
+        <li>Mejorar el funcionamiento y la seguridad del sitio.</li>
+      </ul>
+      <p>No vendemos ni alquilamos tus datos a terceros, ni te enviamos publicidad sin tu consentimiento.</p>
+
+      <h2>Con quién compartimos tus datos</h2>
+      <p>Solo compartimos datos con proveedores que necesitamos para operar, y únicamente en la medida necesaria:</p>
+      <ul>
+        <li>Hosting del sitio (Vercel).</li>
+        <li>Servicios de mensajería y email (WhatsApp, Gmail).</li>
+        <li>Herramientas de automatización e inteligencia artificial que procesan las conversaciones del asistente virtual.</li>
+      </ul>
+      <p>Algunos de estos proveedores pueden almacenar datos fuera de Argentina. Al contactarnos, aceptás esta transferencia con las finalidades descritas.</p>
+
+      <h2>Cuánto tiempo guardamos tus datos</h2>
+      <p>Conservamos tus datos mientras sea necesario para atender tu consulta o prestar el servicio contratado, y luego durante el plazo que exijan las obligaciones legales o contables. Después los eliminamos.</p>
+
+      <h2>Tus derechos</h2>
+      <p>Podés solicitar en cualquier momento el acceso, la rectificación, la actualización o la eliminación de tus datos escribiendo a <a href="mailto:infosoporte25@gmail.com">infosoporte25@gmail.com</a>. Te responderemos dentro de los plazos que fija la ley.</p>
+      
+      <div class="legal-box">
+        <strong>Información oficial - Ley N.º 25.326</strong>
+        El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley N.º 25.326. La Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control de la Ley N.º 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.
+      </div>
+
+      <h2>Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos contra accesos no autorizados, pérdida o alteración. Ningún sistema es completamente infalible, pero trabajamos para mantener tu información segura.</p>
+
+      <h2>Cambios en esta política</h2>
+      <p>Podemos actualizar esta política. Cuando lo hagamos, cambiaremos la fecha de actualización al inicio de esta página.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Elev8. Todos los derechos reservados.</span>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="terminos.html">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
